@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Biomedical engineering lab illustration (stylized SVG) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="Illustrative biomedical engineering lab with bench, microscope, monitor and prototype">
+  <defs>
+    <linearGradient id="roomBg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbfd"/>
+      <stop offset="100%" stop-color="#eef6fb"/>
+    </linearGradient>
+    <linearGradient id="benchGrad" x1="0" x2="0">
+      <stop offset="0%" stop-color="#eef6f9"/>
+      <stop offset="100%" stop-color="#dfeff7"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#07121a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#roomBg)"/>
+
+  <!-- back wall and shelving -->
+  <g transform="translate(60,40)">
+    <rect x="0" y="0" width="1280" height="760" rx="20" fill="#f4f9fc" stroke="#dbeaf6"/>
+
+    <!-- shelves -->
+    <rect x="60" y="40" width="1080" height="36" rx="6" fill="#eef6fb"/>
+    <g transform="translate(80,90)">
+      <rect x="0" y="0" width="220" height="140" rx="8" fill="#fff" stroke="#e6eef6"/>
+      <rect x="260" y="0" width="220" height="140" rx="8" fill="#fff" stroke="#e6eef6"/>
+      <rect x="520" y="0" width="220" height="140" rx="8" fill="#fff" stroke="#e6eef6"/>
+      <rect x="780" y="0" width="220" height="140" rx="8" fill="#fff" stroke="#e6eef6"/>
+    </g>
+
+    <!-- window / chart area -->
+    <rect x="920" y="60" width="320" height="160" rx="8" fill="#eaf6ff" stroke="#cfe8fb"/>
+    <path d="M960 120 L1020 100 L1060 140 L1100 90 L1160 130" fill="none" stroke="#2a85a8" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- bench top -->
+    <g transform="translate(60,260)">
+      <rect x="0" y="0" width="1160" height="220" rx="12" fill="url(#benchGrad)" stroke="#d3e6f2" filter="url(#shadow)"/>
+
+      <!-- microscope -->
+      <g transform="translate(80,20)">
+        <rect x="0" y="40" width="80" height="70" rx="10" fill="#e9f3f8" stroke="#cde3ee"/>
+        <rect x="20" y="0" width="40" height="40" rx="8" fill="#f6fbfd" stroke="#d5e9f3"/>
+        <circle cx="40" cy="85" r="8" fill="#cde6f1"/>
+      </g>
+
+      <!-- monitor and keyboard -->
+      <g transform="translate(260,20)">
+        <rect x="0" y="0" width="220" height="120" rx="8" fill="#071428"/>
+        <rect x="12" y="12" width="196" height="96" rx="6" fill="#0f3a52"/>
+        <path d="M24 72 L64 42 L104 90 L144 56 L184 88" fill="none" stroke="#64FFDA" stroke-width="6" stroke-linecap="round"/>
+        <rect x="28" y="126" width="164" height="18" rx="6" fill="#dfeef8"/>
+      </g>
+
+      <!-- prosthetic prototype on jig -->
+      <g transform="translate(560,30)">
+        <rect x="0" y="60" width="220" height="40" rx="8" fill="#dceff7" stroke="#c9e2f2"/>
+        <rect x="20" y="20" width="40" height="100" rx="12" fill="#f6fbfc" stroke="#d9eef6"/>
+        <rect x="70" y="30" width="120" height="70" rx="14" fill="#f8fbfc" stroke="#dbeef8"/>
+        <line x1="90" y1="60" x2="160" y2="60" stroke="#94c2d6" stroke-width="6" stroke-linecap="round"/>
+      </g>
+
+      <!-- sensors and small devices -->
+      <g transform="translate(860,30)">
+        <rect x="0" y="40" width="60" height="60" rx="8" fill="#eaf6fb" stroke="#cfe6f5"/>
+        <rect x="80" y="30" width="120" height="80" rx="8" fill="#f8fbfd" stroke="#dbeef8"/>
+      </g>
+    </g>
+
+    <!-- floor and stools -->
+    <g transform="translate(140,520)">
+      <rect x="0" y="0" width="1120" height="160" rx="12" fill="#eef6fb"/>
+      <g transform="translate(60,20)">
+        <rect x="0" y="0" width="36" height="36" rx="6" fill="#cfe6f7"/>
+        <rect x="120" y="0" width="36" height="36" rx="6" fill="#cfe6f7"/>
+        <rect x="240" y="0" width="36" height="36" rx="6" fill="#cfe6f7"/>
+      </g>
+    </g>
+
+    <!-- label -->
+    <text x="80" y="740" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#2b4b5f">Biomedical engineering lab — illustrative</text>
+  </g>
+
+</svg>

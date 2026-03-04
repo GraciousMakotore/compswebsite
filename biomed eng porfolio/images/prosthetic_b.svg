@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Prosthetic arm — side view (illustrative) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Illustrative prosthetic arm side view">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fbfcfd"/>
+      <stop offset="100%" stop-color="#eef6f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg2)"/>
+
+  <g transform="translate(100,90)">
+    <!-- shoulder attachment -->
+    <rect x="0" y="40" width="120" height="120" rx="20" fill="#eef7fb" stroke="#d3e7f2"/>
+
+    <!-- arm segments -->
+    <rect x="120" y="80" width="220" height="40" rx="20" fill="#f5fafc" stroke="#cfe2ea"/>
+    <rect x="340" y="80" width="200" height="36" rx="18" fill="#f7fbfd" stroke="#d6e9f1"/>
+
+    <!-- wrist / hand -->
+    <rect x="540" y="86" width="40" height="30" rx="8" fill="#dbeff8"/>
+
+    <!-- joint detail -->
+    <circle cx="340" cy="98" r="18" fill="#e9f3f8" stroke="#cfe6ef"/>
+
+    <!-- labels -->
+    <rect x="20" y="240" width="660" height="50" rx="8" fill="#fff" opacity="0.6"/>
+  </g>
+
+  <text x="24" y="480" font-family="Segoe UI, Arial" font-size="14" fill="#556">Prosthetic arm — side view (illustrative)</text>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Patient monitor — display (illustrative) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="700" height="500" role="img" aria-label="Illustrative patient monitor display">
+  <defs>
+    <linearGradient id="mbg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6fbfc"/>
+      <stop offset="100%" stop-color="#eaf6fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#mbg)"/>
+
+  <g transform="translate(80,60)">
+    <rect x="0" y="0" width="540" height="340" rx="16" fill="#0b2633"/>
+    <rect x="18" y="18" width="504" height="304" rx="12" fill="#0f3b4b"/>
+
+    <!-- waveform -->
+    <path d="M30 180 L90 180 L110 150 L150 210 L190 140 L230 200 L270 170 L330 170 L360 140 L400 200 L460 160 L520 180" fill="none" stroke="#64FFDA" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- vitals text blocks -->
+    <rect x="24" y="24" width="120" height="36" rx="6" fill="#082227"/>
+    <text x="36" y="48" font-family="Segoe UI, Arial" font-size="16" fill="#9fe6d6">HR 78</text>
+  </g>
+
+  <text x="24" y="480" font-family="Segoe UI, Arial" font-size="14" fill="#556">Patient monitor — display (illustrative)</text>
+</svg>

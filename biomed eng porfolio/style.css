@@ -1,0 +1,448 @@
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F4F9FC;
+    color: #333;
+    line-height: 1.6;
+}
+
+:root {
+    --bg: #F4F9FC;
+    --text: #0f1724;
+    --muted: #556074;
+    --accent: #64FFDA;
+    --brand-dark: #0A192F;
+    --card-bg: #ffffff;
+    --container-width: 1100px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background-color: #0A192F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 8px;
+    background: var(--brand-dark);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 2200;
+    transition: top 180ms ease;
+}
+.skip-link:focus {
+    top: 8px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #64FFDA;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(rgba(10,25,47,0.8), rgba(10,25,47,0.8)),
+                url("images/lab.svg") no-repeat center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+/* responsive navigation: small screens */
+.nav-toggle-checkbox {
+    position: absolute;
+    left: -9999px;
+}
+
+.nav-toggle-label {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--accent);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label { display: inline-block; }
+    .nav-menu { display: none; width: 100%; text-align: center; margin-top: 10px; flex-direction: column; }
+    .nav-menu li { display: block; margin: 10px 0; }
+    nav { padding: 12px 18px; }
+    /* when checkbox is checked, show menu */
+    .nav-toggle-checkbox:checked + .nav-toggle-label + .logo + .nav-menu { display: flex; }
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #64FFDA;
+    color: #0A192F;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn { cursor: pointer; }
+
+.btn:hover {
+    background-color: white;
+}
+
+/* ===== INTRO SECTION ===== */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.intro img {
+    width: 400px;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    /* flow naturally full-width; paragraphs expand edge-to-edge */
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: none;
+    min-height: auto;
+}
+
+.about-grid {
+    /* single-column stack: text spans full width of the page */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+    max-width: none;
+    margin: 0;
+    text-align: left;
+}
+
+.about-content h1 {
+    margin-top: 0;
+}
+
+.lead {
+    font-size: 1.05rem;
+    color: #2a3b4a;
+    margin-bottom: 18px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 10px 20px;
+    margin: 14px 0 22px 0;
+}
+
+.skills-list li {
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(2,6,23,0.04);
+}
+
+.about-figure {
+    margin: 0;
+    text-align: center;
+    color: #556;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(8,20,40,0.12);
+}
+
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-figure { order: -1; margin-bottom: 18px; }
+    /* On small screens, let the section flow naturally */
+    .about-section { padding-top: 40px; padding-bottom: 40px; }
+    .about-grid { align-items: start; }
+}
+
+/* place the figure below the content and center the image */
+.about-figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 36px 0 60px 0;
+    text-align: center;
+}
+
+.about-figure .about-image {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* if we added a special bottom-figure class, keep any extra spacing */
+.bottom-figure { margin-top: 48px; }
+
+/* contact status styling */
+.contact-status { font-size: 0.98rem; color: var(--muted); }
+.contact-status a { color: var(--brand-dark); text-decoration: underline; }
+
+/* ===== CARDS ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== IMAGE GALLERY / REALISTIC PHOTO EFFECTS ===== */
+.card-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.card-images img {
+    width: 100%;
+    height: 160px; /* consistent thumbnail height */
+    object-fit: cover; /* crop to fill while preserving aspect */
+    border-radius: 10px;
+    display: block;
+    background-color: #f2f4f6; /* neutral behind transparent SVGs */
+    box-shadow: 0 10px 30px rgba(8,20,40,0.12), inset 0 -3px 8px rgba(0,0,0,0.04);
+    transition: transform 320ms cubic-bezier(.2,.8,.2,1), filter 320ms ease, box-shadow 320ms ease;
+    filter: saturate(1.02) contrast(1.03) brightness(0.99);
+}
+
+.card-images img:hover {
+    transform: translateY(-6px) scale(1.03);
+    filter: saturate(1.08) contrast(1.06) brightness(1.02);
+    box-shadow: 0 18px 40px rgba(8,20,40,0.18), inset 0 -4px 10px rgba(0,0,0,0.05);
+}
+
+/* make thumbnails clearly clickable */
+.card-images img {
+    cursor: pointer;
+}
+
+/* ===== LIGHTBOX / MODAL (CSS only using :target) ===== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(8,12,20,0.85);
+    z-index: 1200;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox-inner {
+    max-width: 95vw;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 30px 80px rgba(2,6,23,0.6);
+    background: #fff;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 1;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 600px) {
+    .lightbox-inner { max-height: 88vh; }
+}
+
+/* subtle framing for the first image to give a more photographic look */
+.card-images img:first-child {
+    border-top-right-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .card-images {
+        grid-template-columns: 1fr; /* stack images on small screens */
+    }
+
+    .card-images img {
+        height: 220px; /* larger vertical preview when stacked */
+    }
+}
+
+/* ===== CONTACT FORM ===== */
+form input, 
+form textarea {
+    width: 70%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form textarea {
+    height: 120px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #0A192F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #64FFDA;
+    color: #0A192F;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #0A192F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}

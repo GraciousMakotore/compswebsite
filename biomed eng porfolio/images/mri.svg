@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stylized MRI scanner illustration (original SVG) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Stylized MRI scanner illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef6fb"/>
+      <stop offset="100%" stop-color="#dfeef8"/>
+    </linearGradient>
+    <linearGradient id="boreGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d7e6f7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#10202f" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Scanner body -->
+  <g transform="translate(120,120)">
+    <!-- outer shell -->
+    <rect x="0" y="0" width="960" height="560" rx="40" fill="#f8fbfe" stroke="#cfe6fb" stroke-width="4" filter="url(#softShadow)"/>
+
+    <!-- control panel strip -->
+    <rect x="40" y="40" width="880" height="80" rx="18" fill="#eef6fb" stroke="#c6ddec"/>
+
+    <!-- bore (circular opening) -->
+    <g transform="translate(480,280)">
+      <circle r="160" fill="url(#boreGrad)" stroke="#c9dff0" stroke-width="6"/>
+      <circle r="114" fill="#071628" opacity="0.06"/>
+      <!-- inner glow ring -->
+      <circle r="120" fill="none" stroke="#cbe8ff" stroke-width="6" opacity="0.45"/>
+    </g>
+
+    <!-- patient table -->
+    <rect x="160" y="360" width="640" height="60" rx="8" fill="#e9f3fb" stroke="#cbdff0"/>
+    <rect x="200" y="340" width="560" height="28" rx="6" fill="#d6eafc"/>
+
+    <!-- small monitor showing a stylized 'brain' waveform -->
+    <g transform="translate(740,50)">
+      <rect x="0" y="0" width="140" height="90" rx="8" fill="#0a2a3f"/>
+      <rect x="8" y="8" width="124" height="74" rx="6" fill="#0f4260"/>
+      <path d="M12 50 C36 28, 58 72, 84 46 C104 26, 120 64, 132 44" fill="none" stroke="#64FFDA" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- decorative legs -->
+    <rect x="120" y="440" width="60" height="24" rx="6" fill="#cfe6f7"/>
+    <rect x="1000-180" y="440" width="60" height="24" rx="6" fill="#cfe6f7"/>
+
+    <!-- small label -->
+    <text x="36" y="520" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#27465a">Illustrative MRI scanner</text>
+  </g>
+
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f4f4f8"/>
+  <g transform="translate(80,80)">
+    <rect x="0" y="100" width="560" height="120" rx="20" fill="#cfcfcf" />
+    <rect x="480" y="80" width="40" height="160" rx="10" fill="#b0b0b0" />
+    <circle cx="520" cy="160" r="18" fill="#9e9e9e" />
+    <rect x="30" y="80" width="120" height="40" rx="10" fill="#6b9bd1" />
+    <text x="0" y="40" font-family="Arial" font-size="28" fill="#333">Prosthetic Arm — Front View</text>
+  </g>
+</svg>

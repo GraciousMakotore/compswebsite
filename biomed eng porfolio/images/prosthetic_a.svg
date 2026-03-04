@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Prosthetic arm — front view (illustrative) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Illustrative prosthetic arm front view">
+  <defs>
+    <linearGradient id="bgp" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7fbfc"/>
+      <stop offset="100%" stop-color="#eef6f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgp)"/>
+
+  <!-- socket/base -->
+  <g transform="translate(120,60)">
+    <rect x="0" y="200" width="560" height="60" rx="12" fill="#dfeff6" stroke="#cde7f0"/>
+
+    <!-- upper arm section -->
+    <rect x="80" y="60" width="140" height="180" rx="30" fill="#f1f6f8" stroke="#c6d5dc"/>
+    <!-- elbow joint -->
+    <circle cx="320" cy="160" r="26" fill="#e6eef3" stroke="#c6d5dc"/>
+    <!-- forearm -->
+    <rect x="340" y="80" width="180" height="120" rx="20" fill="#f9fbfc" stroke="#d0dde6"/>
+
+    <!-- hand/prosthetic terminal -->
+    <g transform="translate(530,120)">
+      <rect x="0" y="0" width="40" height="60" rx="8" fill="#d7e6ef"/>
+      <line x1="8" y1="12" x2="32" y2="12" stroke="#94b9c9" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- sensors/cables -->
+    <path d="M60 120 C110 140, 230 140, 300 120" fill="none" stroke="#a3c2d1" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <text x="24" y="480" font-family="Segoe UI, Arial" font-size="14" fill="#556">Prosthetic arm — front view (illustrative)</text>
+</svg>

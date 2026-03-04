@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#eef7ff"/>
+  <g transform="translate(70,70)">
+    <rect x="0" y="0" width="560" height="320" rx="20" fill="#1f2937" />
+    <rect x="30" y="40" width="500" height="220" rx="10" fill="#03254c" />
+    <polyline points="40,140 100,120 160,150 220,110 280,160 340,130" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="0" y="-10" font-family="Arial" font-size="26" fill="#111">Patient Monitor — Display</text>
+  </g>
+</svg>
